@@ -31,7 +31,7 @@ export const getAuthErrorMessage = (code: string): string => {
     "auth/popup-blocked": "El popup fue bloqueado por el navegador.",
     "auth/cancelled-popup-request": "Operación cancelada.",
   };
-  return messages[code] ?? "Ocurrió un error inesperado.";
+  return messages[code] ?? "Credenciales incorrectas. Verificá usuario y contraseña.";
 };
  
 // ─── Auth functions ──────────────────────────────────────────────────────────
