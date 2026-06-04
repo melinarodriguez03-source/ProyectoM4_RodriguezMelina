@@ -116,6 +116,16 @@ AWS SES envía el email al usuario
 
 Las credenciales de AWS nunca son expuestas al frontend. El cliente solo conoce la ruta `/api/send-email` de la propia aplicación.
 
+## Funcionamiento de la app
+Registrarse:
+![login](src/assets/login.jpg.png)
+
+Crear tareas:
+![Tareas](src/assets/Tareas.png)
+
+Envío de resumen al e-mail:
+![Email-enviado](src/assets/email-enviado.png)
+![Email](src/assets/e-mail.png)
 ---
 
 ## Testing
@@ -142,3 +152,8 @@ Durante el desarrollo se utilizó Claude (Anthropic) como asistente técnico en 
 **Depuración del deploy:** Ante errores en Vercel, se compartieron los logs y se obtuvo orientación para identificar la causa raíz de cada problema.
 
 **Patrón aprendido:** La IA fue más efectiva cuando se le proporcionó contexto completo (código, error exacto, logs) en lugar de descripciones vagas. Las respuestas fueron más precisas y accionables con ese nivel de detalle.
+
+![claude](src/assets/claude1.png)
+![claude](src/assets/claude2.png)
+![claude](src/assets/claude3.png)
+![claude](src/assets/claude4.png)
