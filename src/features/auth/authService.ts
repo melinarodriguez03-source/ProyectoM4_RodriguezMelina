@@ -27,6 +27,9 @@ export const getAuthErrorMessage = (code: string): string => {
     "auth/wrong-password": "Contraseña incorrecta.",
     "auth/too-many-requests": "Demasiados intentos. Intentá más tarde.",
     "auth/popup-closed-by-user": "Cerraste el popup de Google.",
+    "auth/unauthorized-domain": "Dominio no autorizado. Contactá al administrador.",
+    "auth/popup-blocked": "El popup fue bloqueado por el navegador.",
+    "auth/cancelled-popup-request": "Operación cancelada.",
   };
   return messages[code] ?? "Ocurrió un error inesperado.";
 };
