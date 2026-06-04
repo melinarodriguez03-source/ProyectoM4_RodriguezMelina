@@ -1,3 +1,4 @@
+import type { NewTask } from '../types';
 import { useState } from "react";
 import { useAuth } from "../hooks/useAuth";
 import { useTasks } from "../hooks/useTasks";
@@ -33,6 +34,10 @@ const TasksPage = () => {
     setEditingTask(null);
   };
 
+  const handleCreate = async (data: Pick<NewTask, "title" | "description">) => {
+    await create({ ...data, status: "pending", priority: "medium" });
+  };
+
   return (
     <div className="tasks-layout">
       <header className="tasks-header">
@@ -48,7 +53,7 @@ const TasksPage = () => {
 
       <main className="tasks-main">
         <TodoForm
-          onSubmit={editingTask ? handleUpdate : create}
+          onSubmit={editingTask ? handleUpdate : handleCreate}
           editingTask={editingTask}
           onCancel={handleCancelEdit}
         />
