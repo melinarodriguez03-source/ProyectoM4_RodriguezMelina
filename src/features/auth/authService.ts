@@ -53,8 +53,14 @@ export const loginWithEmail = async (
 };
  
 export const loginWithGoogle = async (): Promise<User> => {
-  const { user } = await signInWithPopup(auth, googleProvider);
-  return mapFirebaseUser(user);
+  try {
+    const { user } = await signInWithPopup(auth, googleProvider);
+    return mapFirebaseUser(user);
+  } catch (error: any) {
+    console.error("Google login error code:", error.code);
+    console.error("Google login error message:", error.message);
+    throw error;
+  }
 };
  
 export const logout = (): Promise<void> => signOut(auth);
